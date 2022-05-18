@@ -1,6 +1,6 @@
 h1 {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 table, th, td {
@@ -18,22 +18,8 @@ tr {
     border: 1px solid; 
 }
 
-div.deleteItem {
-    text-align: center;
-    margin-top: 50px;
-}
 
-div.createItem, div.updateItem {
+div.createItem, div.updateItem, div.deleteItem, div.unDeleteItem, footer {
     text-align: center;
-    margin-top: 50px;
-}
-
-div.unDeleteItem {
-    text-align: center;
-    margin-top: 50px;  
-}
-
-footer {
-    margin-top: 50px;
-    text-align: center;
+    margin-top: 25px;
 }
