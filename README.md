@@ -20,7 +20,7 @@
 - View all Inventory Items.
 - Update an Inventory Item.
 - Delete an Inventory Item (As explained above, does not actually delete the Inventory Item from the database, only sets the isDeleted variable to true).
-- UnDelete an Inventory Item.
+- UnDelete an Inventory Item (Assigns isDeleted variable the Boolean value true).
 
 
 <h2> How to run the application </h2>
