@@ -1,0 +1,38 @@
+<%- include("header") -%>
+
+<h3>To go back to Inventory page,  click <a href="/items">here</a></h3>
+<h1>Deleted Items from Inventory</h1>
+
+
+<div class="deletedItemsList" >
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Deletion Comment</th>
+        </tr>
+        <% itemsList.forEach(function(item) { %>
+        <tr>
+            <td><%= item._id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.description %></td>
+            <td><%= item.quantity %></td>
+            <td><%= item.deletionComment %></td>
+        </tr>
+        <% }); %>
+    </table>
+</div>
+
+<div class="unDeleteItem">
+    <h2>unDelete an inventory item</h2>
+    <form action="/items/unDelete" method="post">
+        <label for="itemId"> Item Id:</label>
+        <input type="text" id="itemId" name="itemId">
+        <button type="submit">unDelete</button>
+    </form>
+</div>
+
+
+<%- include("footer") -%>

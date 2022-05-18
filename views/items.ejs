@@ -1,0 +1,67 @@
+<%- include("header") -%>
+
+<h1>Inventory</h1>
+
+<div class="itemsList" >
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+        </tr>
+        <% itemsList.forEach(function(item) { %>
+        <tr>
+            <td><%= item._id %></td>
+            <td><%= item.name %></td>
+            <td><%= item.description %></td>
+            <td><%= item.quantity %></td>
+        </tr>
+        <% }); %>
+    </table>
+</div>
+
+<div class="createItem">
+    <h2>Create an inventory item</h2>
+    <form action="/items" method="post">
+        <label for="name"> Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity"><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" cols="19" rows="3"></textarea><br>
+        <button type="submit">Add</button>
+    </form>
+</div>
+
+<div class="updateItem">
+    <h2>Update an inventory item</h2>
+    <h5>(Fill in all fields that you wish to update)</h5>
+    <form action="/items/update" method="post">
+        <label for="name"> Id:</label><br>
+        <input type="text" id="Id" name="Id"><br>
+        <label for="name"> Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="quantity">Quantity:</label><br>
+        <input type="number" id="quantity" name="quantity"><br>
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" cols="19" rows="3"></textarea><br>
+        <button type="submit">update</button>
+    </form>
+</div>
+
+<div class="deleteItem">
+    <h2>Delete an inventory item</h2>
+    <form action="/items/delete" method="post">
+        <label for="itemId"> Item Id:</label><br>
+        <input type="text" id="itemId" name="itemId"><br>
+        <label for="deletionComment">Deletion Comment:</label><br>
+        <textarea name="deletionComment" id="deletionComment" cols="19" rows="3"></textarea><br>
+        <button type="submit"> Delete</button>
+    </form>
+
+    <h3>To view deleted items or undelete items, click <a href="/deletedItems">here</a></h3>
+</div>
+
+
+<%- include("footer") -%>

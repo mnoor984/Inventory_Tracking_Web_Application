@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+tr {
+    border: 1px solid; 
+}
+
+div.deleteItem {
+    text-align: center;
+    margin-top: 50px;
+}
+
+div.createItem, div.updateItem {
+    text-align: center;
+    margin-top: 50px;
+}
+
+div.unDeleteItem {
+    text-align: center;
+    margin-top: 50px;  
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+}
